@@ -20,4 +20,14 @@ class PagesController extends Controller
     {
         return view('credits');
     }
+
+    public function github()
+    {
+        return view('github');
+    }
+
+    public function tracks()
+    {
+        return view('tracks');
+    }
 }

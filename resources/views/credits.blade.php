@@ -21,10 +21,7 @@
         <p>social</p>
         <a href="https://vk.com/amnezyyy"><i class='bx bxl-vk credits-icons'></i></a>
         <a href="https://steamcommunity.com/id/ketamine3/"><i class='bx bxl-steam credits-icons' ></i></a>
-        <a href="https://steamcommunity.com/id/ketamine3/"><i class='bx bxl-steam credits-icons' ></i></a>
-        <a href="https://steamcommunity.com/id/ketamine3/"><i class='bx bxl-steam credits-icons' ></i></a>
-        <a href="https://steamcommunity.com/id/ketamine3/"><i class='bx bxl-steam credits-icons' ></i></a>
-        <a href="https://steamcommunity.com/id/ketamine3/"><i class='bx bxl-steam credits-icons' ></i></a>
+        <a href="https://github.com/amnezyyy"><i class='bx bxl-github credits-icons'></i></a>
     </div>
 </section>
 

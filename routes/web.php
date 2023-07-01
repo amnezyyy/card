@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/beats', [PagesController::class, 'beats']);
 Route::get('/credits', [PagesController::class, 'credits']);
+Route::get('/github', [PagesController::class, 'github']);
+Route::get('/tracks', [PagesController::class, 'tracks']);
