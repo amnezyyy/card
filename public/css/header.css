@@ -43,3 +43,8 @@ header{
     cursor: pointer;
     display: none;
 }
+
+::selection{
+    color: white;
+    background-color: red;
+}

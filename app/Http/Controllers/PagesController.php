@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Beats;
+use App\Models\Tracks;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -13,7 +15,8 @@ class PagesController extends Controller
 
     public function beats()
     {
-        return view('beats');
+        $beats = Beats::get();
+        return view('beats', compact('beats'));
     }
 
     public function credits()
@@ -28,6 +31,7 @@ class PagesController extends Controller
 
     public function tracks()
     {
-        return view('tracks');
+        $tracks = Tracks::get();
+        return view('tracks', compact('tracks'));
     }
 }

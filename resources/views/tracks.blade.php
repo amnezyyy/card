@@ -17,7 +17,13 @@
 @include('blocks.header')
 
 <section class="tracks">
-
+    @foreach($tracks as $track)
+    <a href="{{$track->link}}" class="cover" style="background: url({{asset($track->cover)}}); background-size: cover;">
+        <div class="black">
+            <i class='bx bx-play play'></i>
+        </div>
+    </a>
+    @endforeach
 </section>
 
 </body>

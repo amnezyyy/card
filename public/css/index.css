@@ -44,7 +44,3 @@
     background: red;
 }
 
-::selection{
-    color: white;
-    background-color: red;
-}

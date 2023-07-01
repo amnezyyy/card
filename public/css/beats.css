@@ -16,3 +16,35 @@
     padding: 0 10%;
     align-items: center;
 }
+
+.beat{
+    width: 24%;
+    height: 370px;
+    border-radius: 10px;
+}
+
+.black{
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.beat:hover > .black{
+    display: flex;
+}
+
+.play{
+    color: white;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.pause{
+    color: white;
+    font-size: 5rem;
+    cursor: pointer;
+}
