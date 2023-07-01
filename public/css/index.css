@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fragment Mono', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 0 10%;
+}
+
+.main-text{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.link{
+    font-size: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.link-indicator {
+    width: 12px;
+    height: 12px;
+    border: 1px solid red;
+    flex: none;
+    transition: all .5s ease;
+}
+
+.link:hover > .link-indicator{
+    background: red;
+}
+
+a::selection{
+    color: white;
+    background-color: red;
+}

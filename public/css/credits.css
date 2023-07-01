@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fragment Mono', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+
+.credits{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: start;
+    padding: 0 10%;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.credits-icons{
+    color: black;
+    font-size: 30px;
+    border-bottom: 2px solid transparent;
+    transition: .5s ease all;
+}
+
+p{
+    font-size: 25px;
+}
+
+::selection{
+    color: white;
+    background: red;
+}
