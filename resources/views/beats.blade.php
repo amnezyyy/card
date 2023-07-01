@@ -27,10 +27,10 @@
             </audio>
         </div>
     </div>
+        @include('blocks.music-bar')
     @endforeach
 </section>
 
-@include('blocks.music-bar')
 
 </body>
 </html>
