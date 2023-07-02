@@ -17,6 +17,7 @@
 @include('blocks.header')
 
 <section class="main">
+{{--    <div class="transform" style="background: url({{asset('img/82582622.png')}}); background-size: cover"></div>--}}
     <div class="main-text">
         <a href="{{'/beats'}}" class="link"><div class="link-indicator"></div>beats</a>
         <a href="{{'/github'}}" class="link"><div class="link-indicator"></div>github</a>

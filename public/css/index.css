@@ -12,11 +12,10 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     align-items: center;
-    gap: 2rem;
     padding: 0 10%;
+    justify-content: center;
 }
 
 .main-text{
@@ -44,3 +43,30 @@
     background: red;
 }
 
+.transform{
+    animation: transform 20s infinite ease;
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes transform {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    25% {
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    75% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}

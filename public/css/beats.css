@@ -12,7 +12,7 @@
     height: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     padding: 0 10%;
     align-items: center;
 }
@@ -31,19 +31,26 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.btn{
+    display: flex;
+}
+
+.beat-name{
+    font-size: 25px;
+    color: white;
 }
 
 .beat:hover > .black{
     display: flex;
 }
 
-.play{
-    color: white;
-    font-size: 5rem;
-    cursor: pointer;
-}
-
-.pause{
+.play,
+.pause,
+.link{
     color: white;
     font-size: 5rem;
     cursor: pointer;

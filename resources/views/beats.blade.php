@@ -20,38 +20,39 @@
     @foreach($beats as $key => $beat)
     <div class="beat" style="background: url({{asset($beat->cover)}}); background-size: cover">
         <div class="black">
-            <i class='bx bx-play play' onclick="playBeat({{$key}})"></i>
-            <i class='bx bx-pause pause' onclick="pauseBeat({{$key}})" style="display: none"></i>
-            <audio controls style="width:100%; display: none" class="audio">
-                <source src="{{asset($beat->audio)}}" type="audio/mp3">
-            </audio>
+            <p class="beat-name">{{$beat->name}}</p>
+            <div class="btn">
+                <i class='bx bx-play play' onclick="playBeat({{$key}})"></i>
+                <i class='bx bx-pause pause' onclick="pauseBeat({{$key}})" style="display: none"></i>
+                <i class='bx bx-link-alt link' ></i>
+            </div>
         </div>
     </div>
         @include('blocks.music-bar')
     @endforeach
 </section>
 
-
-</body>
-</html>
-
 <script src="{{asset('js/jquery-v3.7.0.min.js')}}"></script>
 <script>
-    audio = $('.audio');
+    audio = $('.audio')
     play = $('.play')
     pause = $('.pause')
     bar= $('.bar')
 
     function playBeat(id){
-        audio.eq(id).play()
+        audio.trigger('pause')
+        audio.eq(id).trigger('play')
         play.eq(id).hide()
         pause.eq(id).show()
-        bar.css("display", "flex").hide().show();
+        bar.eq(id).css("display", "flex").show()
     }
 
-    function pauseBeat(){
-        audio.pause();
-        pause.hide()
-        play.show()
+    function pauseBeat(id){
+        audio.eq(id).trigger('pause')
+        pause.eq(id).hide()
+        play.eq(id).show()
     }
 </script>
+
+</body>
+</html>
