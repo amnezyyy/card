@@ -17,12 +17,12 @@
 @include('blocks.header')
 
 <section class="beats">
-    @foreach($beats as $beat)
+    @foreach($beats as $key => $beat)
     <div class="beat" style="background: url({{asset($beat->cover)}}); background-size: cover">
         <div class="black">
-            <i class='bx bx-play play' onclick="playBeat()"></i>
-            <i class='bx bx-pause pause' onclick="pauseBeat()" style="display: none"></i>
-            <audio controls style="width:100%; display: none" id="audio">
+            <i class='bx bx-play play' onclick="playBeat({{$key}})"></i>
+            <i class='bx bx-pause pause' onclick="pauseBeat({{$key}})" style="display: none"></i>
+            <audio controls style="width:100%; display: none" class="audio">
                 <source src="{{asset($beat->audio)}}" type="audio/mp3">
             </audio>
         </div>
@@ -37,15 +37,15 @@
 
 <script src="{{asset('js/jquery-v3.7.0.min.js')}}"></script>
 <script>
-    audio = document.getElementById("audio");
+    audio = $('.audio');
     play = $('.play')
     pause = $('.pause')
     bar= $('.bar')
 
-    function playBeat(){
-        audio.play();
-        play.hide()
-        pause.show()
+    function playBeat(id){
+        audio.eq(id).play()
+        play.eq(id).hide()
+        pause.eq(id).show()
         bar.css("display", "flex").hide().show();
     }
 
