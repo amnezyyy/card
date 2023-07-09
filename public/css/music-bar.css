@@ -33,6 +33,11 @@
     border-radius: 10px;
 }
 
+.text-bar{
+    display: flex;
+    flex-direction: column;
+}
+
 .title-bar{
     color: white;
     margin-left: 1rem;
