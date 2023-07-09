@@ -55,6 +55,5 @@
         play.eq(id).show()
     }
 </script>
-
 </body>
 </html>
