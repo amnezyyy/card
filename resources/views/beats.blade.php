@@ -15,22 +15,29 @@
 
 @include('blocks.header')
 
-<section class="beats">
-    @foreach($beats as $key => $beat)
-    <div class="beat" style="background: url({{asset($beat->cover)}}); background-size: cover">
-        <div class="black">
-            <p class="beat-name">{{$beat->name}}</p>
-            <div class="btn">
-                <i class='bx bx-play play' onclick="playBeat({{$key}})"></i>
-                <i class='bx bx-pause pause' onclick="pauseBeat({{$key}})" style="display: none"></i>
-                <a href="https://www.youtube.com/watch?v=zIL-kiHiQUU"><i class='bx bx-link link'></i></a>
-            </div>
-            <p class="beat-tags">{{$beat->tags}}</p>
-        </div>
-    </div>
-        @include('blocks.music-bar')
-    @endforeach
-</section>
+
+
+{{--<form action="{{url('/add_beat')}}" method="post">--}}
+{{--    <button type="submit"></button>--}}
+{{--</form>--}}
+
+
+{{--<section class="beats">--}}
+{{--    @foreach($beats as $key => $beat)--}}
+{{--    <div class="beat" style="background: url({{asset($beat->cover)}}); background-size: cover">--}}
+{{--        <div class="black">--}}
+{{--            <p class="beat-name">{{$beat->name}}</p>--}}
+{{--            <div class="btn">--}}
+{{--                <i class='bx bx-play play' onclick="playBeat({{$key}})"></i>--}}
+{{--                <i class='bx bx-pause pause' onclick="pauseBeat({{$key}})" style="display: none"></i>--}}
+{{--                <a href="https://www.youtube.com/watch?v=zIL-kiHiQUU" target="_blank"><i class='bx bx-link link'></i></a>--}}
+{{--            </div>--}}
+{{--            <p class="beat-tags">{{$beat->tags}}</p>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--        @include('blocks.music-bar')--}}
+{{--    @endforeach--}}
+{{--</section>--}}
 
 <script src="{{asset('js/jquery-v3.7.0.min.js')}}"></script>
 <script>

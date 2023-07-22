@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Beats;
 use Illuminate\Console\Command;
+use Mockery\Exception;
 use function Symfony\Component\String\u;
 
 class TestCommand extends Command
@@ -26,19 +28,6 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        $file = 3;
-        $a = [
-            0 => 10,
-            1 => 11,
-            2 => 12
-        ];
-
-        try {
-            if (!array_key_exists($file, $a)){
-                throw new \Exception('Key dosnt exist!');
-            }
-        } catch (\Exception $exception) {
-            echo $exception->getMessage();
-        }
+        
     }
 }

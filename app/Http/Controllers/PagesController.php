@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Action\BeatsAction;
 use App\Models\Beats;
 use App\Models\Tracks;
 use Illuminate\Http\Request;
@@ -33,5 +34,11 @@ class PagesController extends Controller
     {
         $tracks = Tracks::get();
         return view('tracks', compact('tracks'));
+    }
+
+    public function addBeat()
+    {
+        $action = new BeatsAction();
+        return $action->heandle();
     }
 }

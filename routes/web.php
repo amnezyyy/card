@@ -19,3 +19,5 @@ Route::get('/beats', [PagesController::class, 'beats']);
 Route::get('/credits', [PagesController::class, 'credits']);
 Route::get('/github', [PagesController::class, 'github']);
 Route::get('/tracks', [PagesController::class, 'tracks']);
+
+Route::post('/add_beat', [PagesController::class, 'addBeat']);
